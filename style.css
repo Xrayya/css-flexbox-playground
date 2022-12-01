@@ -104,7 +104,7 @@ input[type='number'] {
   padding: 2px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 85vh) {
   .display {
     height: 200px;
     margin: 8px;

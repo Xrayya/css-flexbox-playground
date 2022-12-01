@@ -47,7 +47,7 @@ rectangleHeight.addEventListener('change', function() {
   });
 });
 
-if (screen.width <= 640) {
+if (screen.width <= 602) {
   displayHeight.value = 200;
   rectangleWidth.value = 48;
   rectangleHeight.value = 48;
@@ -58,13 +58,25 @@ if (screen.width <= 640) {
 }
 
 window.addEventListener('resize', function() {
-  if (screen.width <= 640) {
+  if (screen.width <= 602) {
     displayHeight.value = 200;
+
     rectangleWidth.value = 48;
     rectangleHeight.value = 48;
+    const rectangles = document.querySelectorAll('.rectangle');
+    rectangles.forEach((rectangle) => {
+      rectangle.style.width = rectangleWidth.value.concat('px');
+      rectangle.style.height = rectangleHeight.value.concat('px');
+    });
   } else {
     displayHeight.value = 350;
+
     rectangleWidth.value = 96;
     rectangleHeight.value = 96;
+    const rectangles = document.querySelectorAll('.rectangle');
+    rectangles.forEach((rectangle) => {
+      rectangle.style.width = rectangleWidth.value.concat('px');
+      rectangle.style.height = rectangleHeight.value.concat('px');
+    });
   }
 });
