@@ -4,10 +4,14 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+body {
+  background-color: #f2e7d5;
+}
+
 .display {
   height: 400px;
   margin: 16px;
-  border: solid 4px aquamarine;
+  border: solid 4px #008080;
   border-radius: 8px;
   padding: 4px;
   box-sizing: border-box;
@@ -24,7 +28,7 @@
 .rectangle {
   width: 96px;
   height: 96px;
-  background-color: teal;
+  background-color: #006666;
 }
 
 .checkbox-wrapper {
@@ -39,7 +43,7 @@
 .display-control {
   margin: 16px;
   padding: 4px;
-  border: solid 4px aquamarine;
+  border: solid 4px #008080;
   border-radius: 8px;
 }
 
@@ -56,7 +60,7 @@
 .flex-direction,
 .flex-wrap {
   width: auto;
-  border: solid 4px aquamarine;
+  border: solid 4px #008080;
   border-radius: 8px;
   padding: 4px;
 
@@ -76,6 +80,20 @@ label {
   font-weight: 400;
 }
 
-input[type="radio"] {
-  accent-color: teal;
+input[type='radio'] {
+  accent-color: #006666;
+  background-color: #ffefd6;
+}
+
+input[type='radio']:disabled {
+  accent-color: #006666;
+  background-color: #ffefd6;
+}
+
+input[type='number'] {
+  margin-bottom: 4px;
+  background-color: #ffefd6;
+  border: solid 2px #006666;
+  border-radius: 4px;
+  padding: 2px;
 }
