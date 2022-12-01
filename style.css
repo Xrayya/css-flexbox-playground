@@ -102,6 +102,7 @@ input[type='number'] {
   border: solid 2px #006666;
   border-radius: 4px;
   padding: 2px;
+  width: 125px;
 }
 
 @media screen and (max-width: 91vh) {
