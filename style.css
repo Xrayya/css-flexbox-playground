@@ -142,4 +142,8 @@ input[type='number'] {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
   }
+
+  input[type='number'] {
+    width: 75px;
+  }
 }
