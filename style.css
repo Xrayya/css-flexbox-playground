@@ -24,7 +24,7 @@ body {
 
   display: flex;
   gap: 4px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
 
@@ -104,35 +104,19 @@ input[type='number'] {
   padding: 2px;
 }
 
-@media screen and (max-width: 85vh) {
+@media screen and (max-width: 91vh) {
   .display {
     height: 200px;
     margin: 8px;
-    border: solid 4px #008080;
-    border-radius: 8px;
-    padding: 4px;
-    box-sizing: border-box;
-
-    display: flex;
-    gap: 4px;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    overflow: hidden;
   }
 
   .rectangle {
     width: 48px;
     height: 48px;
-    background-color: #006666;
   }
 
   .display-control {
     margin: 8px;
-    padding: 4px;
-    border: solid 4px #008080;
-    border-radius: 8px;
   }
 
   .flex-control {
