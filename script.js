@@ -2,7 +2,7 @@ const radioButtons = document.querySelectorAll('input[type="radio"]');
 const display = document.querySelector('.display');
 
 radioButtons.forEach((button) => {
-  button.addEventListener('click', function () {
+  button.addEventListener('input', function () {
     display.style[button.getAttribute('name')] =
       button.getAttribute('passToDisplay');
   });
