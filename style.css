@@ -8,8 +8,14 @@ body {
   background-color: #f2e7d5;
 }
 
+.display-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .display {
-  height: 400px;
+  height: 350px;
+  width: 100%;
   margin: 16px;
   border: solid 4px #008080;
   border-radius: 8px;
@@ -96,4 +102,44 @@ input[type='number'] {
   border: solid 2px #006666;
   border-radius: 4px;
   padding: 2px;
+}
+
+@media screen and (max-width: 640px) {
+  .display {
+    height: 200px;
+    margin: 8px;
+    border: solid 4px #008080;
+    border-radius: 8px;
+    padding: 4px;
+    box-sizing: border-box;
+
+    display: flex;
+    gap: 4px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    overflow: hidden;
+  }
+
+  .rectangle {
+    width: 48px;
+    height: 48px;
+    background-color: #006666;
+  }
+
+  .display-control {
+    margin: 8px;
+    padding: 4px;
+    border: solid 4px #008080;
+    border-radius: 8px;
+  }
+
+  .flex-control {
+    margin: 8px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
 }

@@ -1,152 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>JS & DOM</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Azhary Munir Abdillah" />
+    <meta name="topic" content="DDAP - Final Project" />
+    <meta name="subject" content="DDAP" />
+    <meta name="formatter" content="prettier" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <title>JS & DOM</title>
-  <meta charset="UTF-8" />
-  <meta name="author" content="Azhary Munir Abdillah" />
-  <meta name="topic" content="DDAP - Final Project" />
-  <meta name="subject" content="DDAP" />
-  <meta name="formatter" content="prettier" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- font 'Roboto Condensed' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- font 'Roboto Condensed' -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
-    rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
 
-  <link href="style.css" rel="stylesheet" />
-</head>
-
-<body>
-  <!-- display effect -->
-  <div class="display">
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-  </div>
-
-  <!-- control -->
-  <div class="display-control">
-    <!-- display dimension -->
-    <label for="display-height">Display height : </label>
-    <input id="display-height" type="number" name="display-dimension" value="400" min="0" />
-    <span>px</span>
-
-    <br />
-
-    <!-- rectangle count -->
-    <label for="rectangle-count">Rectangle count : </label>
-    <input id="rectangle-count" type="number" name="display-dimension" value="15" min="0" />
-
-    <br />
-
-    <!-- rectangle dimension -->
-    <label for="rectangle-width">Rectangle width : </label>
-    <input id="rectangle-width" type="number" name="rectangle-dimension" value="96" min="0" />
-    <span>px</span>
-    <br />
-    <label for="rectangle-height">Rectangle height : </label>
-    <input id="rectangle-height" type="number" name="rectangle-dimension" value="96" min="0" />
-    <span>px</span>
-  </div>
-  <div class="flex-control">
-    <div class="flex-direction">
-      <h2>flex-direction</h2>
-      <hr />
-      <div class="checkbox-wrapper">
-        <input type="radio" name="flex-direction" value="" id="fd-row" checked passToDisplay="row" />
-        <label for="fd-row">row</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="flex-direction" value="" id="fd-column" passToDisplay="column" />
-        <label for="fd-column">column</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="flex-direction" value="" id="fd-row-reverse" passToDisplay="row-reverse" />
-        <label for="fd-row-reverse">row-reverse</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="flex-direction" value="" id="fd-column-reverse" passToDisplay="column-reverse" />
-        <label for="fd-column-reverse">column-reverse</label>
+  <body>
+    <!-- display effect -->
+    <div class="display-wrapper">
+      <div class="display">
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
       </div>
     </div>
-    <div class="flex-wrap">
-      <h2>flex-wrap</h2>
-      <hr />
-      <div class="checkbox-wrapper">
-        <input type="radio" name="flex-wrap" value="" id="fw-nowrap" checked passToDisplay="nowrap" />
-        <label for="fw-nowrap">nowrap</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="flex-wrap" value="" id="fw-wrap" passToDisplay="wrap" />
-        <label for="fw-wrap">wrap</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="flex-wrap" value="" id="fw-wrap-reverse" passToDisplay="wrap-reverse" />
-        <label for="fw-wrap-reverse">wrap-reverse</label>
-      </div>
-    </div>
-    <div class="justify-content">
-      <h2>justify-content</h2>
-      <hr />
-      <div class="checkbox-wrapper">
-        <input type="radio" name="justify-content" value="" id="jc-flex-start" checked passToDisplay="flex-start" />
-        <label for="jc-flex-start">flex-start</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="justify-content" value="" id="jc-flex-end" passToDisplay="flex-end" />
-        <label for="jc-flex-end">flex-end</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="justify-content" value="" id="jc-center" passToDisplay="center" />
-        <label for="jc-center">center</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="justify-content" value="" id="jc-space-between" passToDisplay="space-between" />
-        <label for="jc-space-between">space-between</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="justify-content" value="" id="jc-space-around" passToDisplay="space-around" />
-        <label for="jc-space-around">space-around</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="justify-content" value="" id="jc-space-evenly" passToDisplay="space-evenly" />
-        <label for="jc-space-evenly">space-evenly</label>
-      </div>
-    </div>
-    <div class="align-items">
-      <h2>align-items</h2>
-      <hr />
-      <div class="checkbox-wrapper">
-        <input type="radio" name="align-items" value="" id="ai-flex-start" checked passToDisplay="flex-start" />
-        <label for="ai-flex-start">flex-start</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="align-items" value="" id="ai-flex-end" passToDisplay="flex-end" />
-        <label for="ai-flex-end">flex-end</label>
-      </div>
-      <div class="checkbox-wrapper">
-        <input type="radio" name="align-items" value="" id="ai-center" passToDisplay="center" />
-        <label for="ai-center">center</label>
-      </div>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
 
+    <!-- control -->
+    <div class="display-control">
+      <!-- rectangle count -->
+      <label for="rectangle-count">Rectangle count : </label>
+      <input
+        id="rectangle-count"
+        type="number"
+        name="display-dimension"
+        value="15"
+        min="0"
+      />
+
+      <br />
+
+      <!-- rectangle dimension -->
+      <label for="rectangle-height">Rectangle height : </label>
+      <input
+        id="rectangle-height"
+        type="number"
+        name="rectangle-dimension"
+        min="0"
+      />
+      <span>px</span>
+      <br />
+      <label for="rectangle-width">Rectangle width : </label>
+      <input
+        id="rectangle-width"
+        type="number"
+        name="rectangle-dimension"
+        min="0"
+      />
+      <span>px</span>
+
+      <br />
+
+      <!-- display dimension -->
+      <label for="display-height">Display height : </label>
+      <input
+        id="display-height"
+        type="number"
+        name="display-dimension"
+        min="0"
+      />
+      <span>px</span>
+      <br />
+      <label for="display-width">Display width : </label>
+      <input
+        id="display-width"
+        type="number"
+        name="display-dimension"
+        value="100"
+        min="0"
+      />
+      <span>% to screen</span>
+    </div>
+    <div class="flex-control">
+      <div class="flex-direction">
+        <h2>flex-direction</h2>
+        <hr />
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="flex-direction"
+            value=""
+            id="fd-row"
+            checked
+            passToDisplay="row"
+          />
+          <label for="fd-row">row</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="flex-direction"
+            value=""
+            id="fd-column"
+            passToDisplay="column"
+          />
+          <label for="fd-column">column</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="flex-direction"
+            value=""
+            id="fd-row-reverse"
+            passToDisplay="row-reverse"
+          />
+          <label for="fd-row-reverse">row-reverse</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="flex-direction"
+            value=""
+            id="fd-column-reverse"
+            passToDisplay="column-reverse"
+          />
+          <label for="fd-column-reverse">column-reverse</label>
+        </div>
+      </div>
+      <div class="flex-wrap">
+        <h2>flex-wrap</h2>
+        <hr />
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="flex-wrap"
+            value=""
+            id="fw-nowrap"
+            checked
+            passToDisplay="nowrap"
+          />
+          <label for="fw-nowrap">nowrap</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="flex-wrap"
+            value=""
+            id="fw-wrap"
+            passToDisplay="wrap"
+          />
+          <label for="fw-wrap">wrap</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="flex-wrap"
+            value=""
+            id="fw-wrap-reverse"
+            passToDisplay="wrap-reverse"
+          />
+          <label for="fw-wrap-reverse">wrap-reverse</label>
+        </div>
+      </div>
+      <div class="justify-content">
+        <h2>justify-content</h2>
+        <hr />
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="justify-content"
+            value=""
+            id="jc-flex-start"
+            checked
+            passToDisplay="flex-start"
+          />
+          <label for="jc-flex-start">flex-start</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="justify-content"
+            value=""
+            id="jc-flex-end"
+            passToDisplay="flex-end"
+          />
+          <label for="jc-flex-end">flex-end</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="justify-content"
+            value=""
+            id="jc-center"
+            passToDisplay="center"
+          />
+          <label for="jc-center">center</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="justify-content"
+            value=""
+            id="jc-space-between"
+            passToDisplay="space-between"
+          />
+          <label for="jc-space-between">space-between</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="justify-content"
+            value=""
+            id="jc-space-around"
+            passToDisplay="space-around"
+          />
+          <label for="jc-space-around">space-around</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="justify-content"
+            value=""
+            id="jc-space-evenly"
+            passToDisplay="space-evenly"
+          />
+          <label for="jc-space-evenly">space-evenly</label>
+        </div>
+      </div>
+      <div class="align-items">
+        <h2>align-items</h2>
+        <hr />
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="align-items"
+            value=""
+            id="ai-flex-start"
+            checked
+            passToDisplay="flex-start"
+          />
+          <label for="ai-flex-start">flex-start</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="align-items"
+            value=""
+            id="ai-flex-end"
+            passToDisplay="flex-end"
+          />
+          <label for="ai-flex-end">flex-end</label>
+        </div>
+        <div class="checkbox-wrapper">
+          <input
+            type="radio"
+            name="align-items"
+            value=""
+            id="ai-center"
+            passToDisplay="center"
+          />
+          <label for="ai-center">center</label>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
