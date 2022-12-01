@@ -1,0 +1,81 @@
+* {
+  padding: 0px 0px;
+  margin: 0px 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.display {
+  height: 400px;
+  margin: 16px;
+  border: solid 4px aquamarine;
+  border-radius: 8px;
+  padding: 4px;
+  box-sizing: border-box;
+
+  display: flex;
+  gap: 4px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  overflow: hidden;
+}
+
+.rectangle {
+  width: 96px;
+  height: 96px;
+  background-color: teal;
+}
+
+.checkbox-wrapper {
+  width: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.display-control {
+  margin: 16px;
+  padding: 4px;
+  border: solid 4px aquamarine;
+  border-radius: 8px;
+}
+
+.flex-control {
+  margin: 16px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.justify-content,
+.align-items,
+.flex-direction,
+.flex-wrap {
+  width: auto;
+  border: solid 4px aquamarine;
+  border-radius: 8px;
+  padding: 4px;
+
+  flex-grow: 1;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  margin: 2px;
+}
+
+label {
+  font-weight: 400;
+}
+
+input[type="radio"] {
+  accent-color: teal;
+}
